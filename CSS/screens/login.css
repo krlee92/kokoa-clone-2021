@@ -1,0 +1,83 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 50%;
+  opacity: 0.7; /*투명도로 회색같이보임*/
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 18;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+/*- 가상 클래스 선택자(pseudo element)
+  - :not()→ 뭔가가 적용되는 걸 원하지 않을 때 사용한다.
+  - [ ] 사이에 쓰인 것들은 특성 선택자(attribute selector)이다.
+  원치않는걸 뺄때 not 프로퍼티 사용법*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  /*pseudo element들은 :(콜론)이 2개인 게 특징입니다.
+  1) :: placeholder (0:46)
+  : placeholder의 특성만 바꾸고 싶을 때 사용합니다.
+  
+  2) :: selection (1:31)
+  : 클릭해서 긁을 때(1:58) 발생합니다.
+  
+  3) :: first-letter
+  : 첫 글자에만 적용됩니다.
+  
+  4) ::first-line
+  : 첫 줄에만 작용합니다.*/
+  color: rgba(0, 0, 0, 0.4);
+}
+
+input:focus {
+  outline: none;
+}
+
+#login-form input:focus {
+  /*variables.css에 yellow값을 저장해서
+    스타일css에 import시킨후 변수값을 사용함*/
+  border-color: var(--yellow);
+}
+
+/*- 가상 클래스 선택자(pseudo element)
+  - :not()→ 뭔가가 적용되는 걸 원하지 않을 때 사용한다.
+  - [ ] 사이에 쓰인 것들은 특성 선택자(attribute selector)이다.*/
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
