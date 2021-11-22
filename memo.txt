@@ -56,3 +56,5 @@ flex-direction: row-reverse;
 - CSS의 keyframes 애니메이션으로 splash 애니메이션을 줄 수는 있지만, 완벽하게 없어진 상태를 만들 수는 없다. 때문에 JavaScript가 필요하다.
 - 애니메이션의 마지막 값을 기억하고 싶다면 forwards라는 단어를 사용해야한다. → 마지막 keyframes를 기억한다.
 - animation-delay로 약간 지연 시킬 수 있다.
+- will-change는 애니메이션이 좀 더 부드럽게 동작할 수 있게 한다. → 브라우저에게 어떤 것이 변할 것인지 예고해주는 것
+- will-change는 그래픽 카드를 이용해서 애니메이션을 가속화 한다.
