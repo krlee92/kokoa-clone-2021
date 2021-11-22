@@ -23,3 +23,6 @@ BEM(Block Element Modifier) —추천 규칙
 css box padding의 디폴트 원리
 200픽셀의 박스에 50픽셀의 패딩을 주면, css는 기존 박스의 가로를 유지하기 위해 50만큼 박스를 늘림.
 이를 막기 위해 box-sizing:border-box를 쓰면 box의 크기를 유지한 채 padding을 줄 수 있다.
+
+- HTML 코드에선 대문자를 나타내려고 해도, 우선 소문자로만 작성한다. 대문자는 디자인적인 요소이기 때문에, CSS 파일에서 작성해줘야 한다.
+- text-transform: uppercase; 대문자로 만들기.
