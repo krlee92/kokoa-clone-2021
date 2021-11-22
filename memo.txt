@@ -26,3 +26,29 @@ css box padding의 디폴트 원리
 
 - HTML 코드에선 대문자를 나타내려고 해도, 우선 소문자로만 작성한다. 대문자는 디자인적인 요소이기 때문에, CSS 파일에서 작성해줘야 한다.
 - text-transform: uppercase; 대문자로 만들기.
+
+z-index
+default: 0
+숫자가 작을수록 낮은 layer, 클수록 위의 layer
+fixed, absolute position에 이용 가능.
+다른레이어를 가릴때 뒤로보내기 앞으로보내기같은 개념임
+
+- border-top-left-radius 처럼 꼭지점 하나를 특정해서 radius를 줄 수도 있다.
+
+시간과 말풍선 위치를 바꾸는 방법
+1)
+.message-row--own .message__time {
+order: 0;
+margin-right: 5px;
+}
+.message-row--own .message__bubble {
+order: 1;
+margin-right: 0px;
+}
+
+flex children에게 사용할 수 있다. 자식 수가 많으면 어렵다.
+
+2) 간단하고 쿨한방법
+.message-row--own .message__info {
+flex-direction: row-reverse;
+}
