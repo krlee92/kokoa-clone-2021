@@ -52,3 +52,7 @@ flex children에게 사용할 수 있다. 자식 수가 많으면 어렵다.
 .message-row--own .message__info {
 flex-direction: row-reverse;
 }
+
+- CSS의 keyframes 애니메이션으로 splash 애니메이션을 줄 수는 있지만, 완벽하게 없어진 상태를 만들 수는 없다. 때문에 JavaScript가 필요하다.
+- 애니메이션의 마지막 값을 기억하고 싶다면 forwards라는 단어를 사용해야한다. → 마지막 keyframes를 기억한다.
+- animation-delay로 약간 지연 시킬 수 있다.
